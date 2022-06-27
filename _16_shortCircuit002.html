@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자를 이용한 단축평가2</title>
+</head>
+<body>
+    <script>
+        const done = true
+        let message = '';
+
+        message = done && '성공';
+        //성공 리턴
+        console.log(message);
+
+        /* 논리연산자를 사용하지 않고 if문으로 만들면
+        if(done) {
+            message = '성공';
+        }
+        */
+
+
+
+
+        const done2 = false
+        let message2 = '';
+
+        message2 = done2 || '실패';
+        //실패 리턴
+        console.log(message2);
+        
+        /* 논리연산자를 사용하지 않고 if문으로 만들면
+        if(!done2) {
+            message2 = '실패';
+        }
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자를 이용한 단축평가</title>
+</head>
+<body>
+    <script>
+        //dog 리턴
+        console.log('cat' && 'dog');
+
+        //false 리턴
+        console.log(false && 'dog');
+
+        //false 리턴
+        console.log('cat' && false);
+
+
+        //cat 리턴
+        console.log('cat' || 'dog');
+
+        //dog 리턴
+        console.log(false || 'dog');
+
+        //cat 리턴
+        console.log('cat' || false);
+    </script>
+</body>
+</html>

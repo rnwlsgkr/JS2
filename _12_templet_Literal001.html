@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탬플릿 리터럴 선언</title>
+</head>
+<body>
+    <script>
+        const str1 = `Hello World`;
+
+        //기존 문자열에서는 엔터 값은 이스케이프 문자로 표시
+        const str2 = `Hello
+                      World`;
+
+        //기존 문자열은 엔터값을 넣으면 오류 -> \n 써야함
+        var str3 = 'Hello\nWorld';
+                    
+        document.write(str1, "<br>")
+        document.write(str2, "<br>")
+        document.write(str3, "<br>")
+    </script>
+</body>
+</html>
