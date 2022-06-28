@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    <script>
+        const set1 = new Set();
+        console.log(set1);
+
+        //중복 값2,3 제거
+        const set2 = new Set([1, 2, 2, 3, 3,]);
+        console.log(set2);
+
+        //중복값 l 제거
+        const set3 = new Set('hello');
+        console.log(set3);
+
+        //set을 사용안하고 중복제거
+        // v : 현재 검사할 요소
+        // i : 현재 인덱스
+        // self : array 자체 (this)
+        const uniq = array => array.filter((v, i, self) => (self.indexOf(v) === i ))
+        console.log(uniq([2, 1, 2, 3, 4, 4, 3, 2, 1]));
+
+        //set 사용하고 중복제거
+        const uniq1 = array => [...new Set(array)];
+        console.log(uniq1([2, 1, 2, 3, 4, 4, 3, 2, 1]))
+
+        //Set의 요소 개수 확인 : size를 이용
+        
+        //방법1
+        const {size} = set2;
+        console.log(size);
+        //방법2
+        console.log(set3.size);
+
+        //Set에 요소를 추가할 때 add 사용
+        console.log(set1);
+        //중복값을 넣을 수는 있지만 추가는 안됨(중복값 제거)
+        set1.add(1);
+        console.log(set1);
+
+        //add는 체이닝 기법 지원
+        set1.add(2).add(3).add(4);
+        console.log(set1);
+        set1.add(1);
+        console.log(set1);
+
+        //모든 타입의 변수를 가질 수 있다. 배열도 가능
+        set1.add("a").add(true).add(null).add(undefined);
+
+        //Set 요소 존재 여부 확인 할때는 has 사용
+        console.log(set1.has('b'));
+        console.log(set1.has('a'));
+
+        //Set 요소를 제거하는 delete
+        set1.delete('a');
+        //존재하지 않는 요소 제거시 무시함 (존재하지않는 요소 : b )
+        set1.delete('b');
+        console.log(set1)
+
+        //add와 달리 체이닝기법 지원하지 않음
+        // set1.delete(1).delete(2);
+
+        //요소를 일괄 삭제할 때는 clear 사용
+        // set1.clear();     //공부를 위해 마지막에 실행할것  
+        console.log(set1);
+    </script>
+</body>
+</html>
